@@ -15,7 +15,8 @@ export class CitySearchComponent implements OnInit {
 
   search = new FormControl('', [Validators.minLength(3)])
 
-  constructor(private weatherService: WeatherService) { }
+  //constructor(private weatherService: WeatherService) { }
+  constructor() { }
 
   ngOnInit() {
     this.search.valueChanges.pipe(debounceTime(1000))
